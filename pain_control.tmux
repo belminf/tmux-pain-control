@@ -57,6 +57,6 @@ main() {
 	window_move_bindings
 	pane_resizing_bindings
 	pane_split_bindings
-	improve_new_window_binding
+	[ "$(get_tmux_option "@pane_new_window_binding" "yes")" = "yes" ] && improve_new_window_binding
 }
 main
